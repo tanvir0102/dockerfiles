@@ -1,0 +1,8 @@
+#This is a custome ubuntu image with SSH already installed
+
+FROM ubuntu:xenial
+
+MAINTAINER tanvir0102 <tanvir0102@gmail.com>
+
+RUN apt-get update
+RUN apt-get install -y telnet openssh-server

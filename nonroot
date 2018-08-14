@@ -1,0 +1,7 @@
+#Dockerfile based on the latest CentOS 7 image - no priviledged user entry.
+
+FROM centos:latest
+MAINTAINER Tanvir<tanvir0102@gmail>
+
+RUN useradd -ms /bin/bash user
+USER user

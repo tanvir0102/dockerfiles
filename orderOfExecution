@@ -1,0 +1,11 @@
+#Dockerfile based on the latest CentOS 7 image - no priviledged user entry and unerstand the order of execution.
+
+FROM centos:latest
+MAINTAINER Tanvir<tanvir0102@gmail>
+
+RUN useradd -ms /bin/bash user
+
+RUN echo "EXPORT 192.168.0.0/24" >> /etc/exports.list
+
+USER user
+
